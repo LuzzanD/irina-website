@@ -1,11 +1,11 @@
-import pic1 from "../public/images/ben-everett-mSsSIWCO4Ck-unsplash.jpg";
-import pic2 from "../public/images/charles-loyer-QN6fCROYdWM-unsplash.jpg";
-import pic3 from "../public/images/collov-home-design-KvGG0paOhOA-unsplash.jpg";
-import pic4 from "../public/images/free-nomad-GVKKgTuK7XA-unsplash.jpg";
-import pic5 from "../public/images/jalg-tv-stand-5cyCuzVe4J8-unsplash.jpg";
-import pic6 from "../public/images/joan-v_8niZaLOQg-unsplash.jpg";
-import pic7 from "../public/images/polina-kuzovkova-iLk_rbTE-XM-unsplash.jpg";
-import pic8 from "../public/images/r-architecture-TRCJ-87Yoh0-unsplash.jpg";
+import pic1 from "@/public/images/ben-everett-mSsSIWCO4Ck-unsplash.jpg";
+import pic2 from "@/public/images/charles-loyer-QN6fCROYdWM-unsplash.jpg";
+import pic3 from "@/public/images/collov-home-design-KvGG0paOhOA-unsplash.jpg";
+import pic4 from "@/public/images/free-nomad-GVKKgTuK7XA-unsplash.jpg";
+import pic5 from "@/public/images/jalg-tv-stand-5cyCuzVe4J8-unsplash.jpg";
+import pic6 from "@/public/images/joan-v_8niZaLOQg-unsplash.jpg";
+import pic7 from "@/public/images/polina-kuzovkova-iLk_rbTE-XM-unsplash.jpg";
+import pic8 from "@/public/images/r-architecture-TRCJ-87Yoh0-unsplash.jpg";
 
 export const navbarLinks = [
   { name: "HOME", href: "/" },
@@ -13,6 +13,14 @@ export const navbarLinks = [
   { name: "ABOUT US", href: "/about-us" },
   { name: "PORTFOLIO", href: "/portfolio" },
   { name: "CONTACT US", href: "/contact-us" },
+];
+
+export const pictureArray = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8];
+export const pictureArray1 = [
+  "@/public/images/ben-everett-mSsSIWCO4Ck-unsplash.jpg",
+  "@/public/images/charles-loyer-QN6fCROYdWM-unsplash.jpg",
+  "@/public/images/collov-home-design-KvGG0paOhOA-unsplash.jpg",
+  "@/public/images/free-nomad-GVKKgTuK7XA-unsplash.jpg",
 ];
 
 export const presentationCards = [
@@ -109,9 +117,9 @@ export const footerLinks = [
   {
     name: "Social",
     links: [
-      { linkName: "Instagram", href: "" },
-      { linkName: "Facebook", href: "" },
-      { linkName: "Twitter", href: "" },
+      { linkName: "Instagram", href: "https://instagram.com", blank: true },
+      { linkName: "Facebook", href: "https://facebook.com", blank: true },
+      { linkName: "Youtube", href: "https://youtube.com", blank: true },
     ],
   },
 ];

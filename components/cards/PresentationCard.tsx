@@ -16,7 +16,7 @@ const PresentationCard = ({ card, odd }: CardProps) => {
   return (
     <div className="flex w-full items-center h-[400px]">
       {odd && (
-        <div className="w-[35%] px-20 py-16 flex flex-col items-start justify-center bg-slate-100 h-full gap-2">
+        <div className="w-[35%] px-20 py-16 flex flex-col items-start justify-center bg-zinc-50 h-full gap-2">
           <h2 className="text-[20px] font-semibold tracking-wider">
             {card.title}
           </h2>
@@ -39,7 +39,7 @@ const PresentationCard = ({ card, odd }: CardProps) => {
       </div>
 
       {!odd && (
-        <div className="w-[35%] px-20 py-16 flex flex-col items-start justify-center bg-slate-100 h-full gap-2">
+        <div className="w-[35%] px-20 py-16 flex flex-col items-start justify-center bg-zinc-50 h-full gap-2">
           <h2 className="text-[20px] font-semibold tracking-wider">
             {card.title}
           </h2>

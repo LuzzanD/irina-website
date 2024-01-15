@@ -1,6 +1,7 @@
 import Image from "next/image";
 import PresentationCard from "@/components/cards/PresentationCard";
 import { presentationCards } from "@/constants/data";
+import ContactForm from "@/components/forms/ContactForm";
 
 export default function Home() {
   return (
@@ -12,6 +13,16 @@ export default function Home() {
           odd={index % 2 === 0 ? false : true}
         />
       ))}
+      <div className="w-full flex flex-col items-center px-12 py-28 gap-6 bg-zinc-100">
+        <h2 className="text-[18px] tracking-[5px] font-semibold my-4">
+          BOOK AN INITIAL CONSULTATION
+        </h2>
+        <p className="">
+          We’d love to discuss your project, to book an initial no charge
+          consultation, please click below.
+        </p>
+        <ContactForm />
+      </div>
     </main>
   );
 }
