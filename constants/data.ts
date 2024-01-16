@@ -1,4 +1,4 @@
-import pic1 from "@/public/images/ben-everett-mSsSIWCO4Ck-unsplash.jpg";
+import pic1 from "@/public/images/ryan-brooklyn-oct6TSMMfDo-unsplash.jpg";
 import pic2 from "@/public/images/charles-loyer-QN6fCROYdWM-unsplash.jpg";
 import pic3 from "@/public/images/collov-home-design-KvGG0paOhOA-unsplash.jpg";
 import pic4 from "@/public/images/free-nomad-GVKKgTuK7XA-unsplash.jpg";
@@ -89,7 +89,6 @@ export const footerLinks = [
       { linkName: "Contact Us", href: "/contact-us" },
       { linkName: "Portfolio", href: "/portfolio" },
       { linkName: "About Us", href: "/about-us" },
-      { linkName: "Disclaimer", href: "/disclaimer" },
     ],
   },
   {

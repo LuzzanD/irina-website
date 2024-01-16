@@ -30,8 +30,12 @@ const formSchema = z.object({
   }),
 });
 
-const ContactForm = () => {
-  const [editorOpen, setEditorOpen] = useState(false);
+interface Props {
+  hasOpenButton: boolean;
+}
+
+const ContactForm = ({ hasOpenButton }: Props) => {
+  const [editorOpen, setEditorOpen] = useState(hasOpenButton ? false : true);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -57,12 +61,14 @@ const ContactForm = () => {
     <div className="flex flex-col items-center w-full px-16">
       <div className="flex items-center gap-8">
         <div className="h-[1px] flex-1 bg-slate-300 dark:bg-slate-900"></div>
-        <Button
-          className="mt-6 rounded-none tracking-[6px] font-semibold items-center flex justify-center py-7 px-12 text-[18px] border-[3px] hover:text-slate-100 border-slate-900 text-slate-900 bg-transparent"
-          onClick={handleEditorOpen}
-        >
-          {editorOpen ? "CLOSE" : "GET IN TOUCH"}
-        </Button>
+        {hasOpenButton && (
+          <Button
+            className="mt-6 rounded-none tracking-[6px] font-semibold items-center flex justify-center py-7 px-12 text-[18px] border-[3px] hover:text-slate-100 border-slate-900 text-slate-900 bg-transparent"
+            onClick={handleEditorOpen}
+          >
+            {editorOpen ? "CLOSE" : "GET IN TOUCH"}
+          </Button>
+        )}
       </div>
       {editorOpen && (
         <div className="w-full mt-16 ">

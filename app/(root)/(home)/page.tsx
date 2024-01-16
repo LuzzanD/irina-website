@@ -21,7 +21,7 @@ export default function Home() {
           We’d love to discuss your project, to book an initial no charge
           consultation, please click below.
         </p>
-        <ContactForm />
+        <ContactForm hasOpenButton={true} />
       </div>
     </main>
   );
