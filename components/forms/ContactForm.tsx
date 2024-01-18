@@ -58,20 +58,18 @@ const ContactForm = ({ hasOpenButton }: Props) => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full px-0 lg:px-16">
-      <div className="flex items-center gap-8">
-        <div className="h-[1px] flex-1 bg-slate-300 dark:bg-slate-900"></div>
-        {hasOpenButton && (
-          <Button
-            className="mt-6 rounded-none tracking-[6px] font-semibold items-center flex justify-center py-5 lg:py-7 px-7 lg:px-12 text-[14px] lg:text-[18px] border-[3px] hover:text-slate-100 border-slate-900 text-slate-900 bg-transparent"
-            onClick={handleEditorOpen}
-          >
-            {editorOpen ? "CLOSE" : "GET IN TOUCH"}
-          </Button>
-        )}
-      </div>
+    <div className="flex flex-col items-center w-full px-4 md:px-8 lg:px-16">
+      {hasOpenButton && (
+        <Button
+          className="mt-6 rounded-none tracking-[2px] sm:tracking-[4px] lg:tracking-[6px] font-semibold items-center flex justify-center sm:py-5 lg:py-7 py-3 px-3 sm:px-7 lg:px-12 text-[10px] xs:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] border-[1.5px] sm:border-[2px] lg:border-[3px] hover:text-slate-100 border-slate-900 text-slate-900 bg-transparent"
+          onClick={handleEditorOpen}
+        >
+          {editorOpen ? "CLOSE" : "GET IN TOUCH"}
+        </Button>
+      )}
+
       {editorOpen && (
-        <div className="w-full mt-16 ">
+        <div className="w-full mt-6 sm:mt-10 lg:mt-16">
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
@@ -81,7 +79,7 @@ const ContactForm = ({ hasOpenButton }: Props) => {
                 control={form.control}
                 name="text"
                 render={({ field }) => (
-                  <FormItem className="w-full mb-8">
+                  <FormItem className="w-full mb-4 sm:mb-6 lg:mb-8">
                     <FormControl className="w-full flex flex-wrap gap-8 justify-center">
                       <div className="flex flex-wrap gap-8">
                         <Input
@@ -145,7 +143,7 @@ const ContactForm = ({ hasOpenButton }: Props) => {
               />
               <Button
                 type="submit"
-                className="rounded-none tracking-[6px] font-semibold items-center flex justify-center py-5 lg:py-7 px-7 lg:px-12 text-[14px] lg:text-[18px] border-[3px] hover:text-slate-100 border-slate-900 text-slate-900 bg-transparent"
+                className="rounded-none text-center tracking-[2px] sm:tracking-[4px] lg:tracking-[6px] font-semibold items-center flex justify-center sm:py-5 lg:py-7 py-3 px-3 sm:px-7 lg:px-12 text-[10px] xs:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] border-[1.5px] sm:border-[2px] lg:border-[3px] hover:text-slate-100 border-slate-900 text-slate-900 bg-transparent"
               >
                 SEND
               </Button>

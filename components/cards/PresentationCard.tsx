@@ -14,7 +14,7 @@ interface CardProps {
 
 const PresentationCard = ({ card, odd }: CardProps) => {
   return (
-    <div className="flex w-full flex-col lg:flex-row items-center h-[600px] lg:h-[400px] border-t-[2px]">
+    <div className="flex w-full flex-col lg:flex-row items-center h-[600px] lg:h-[450px] border-t-[2px]">
       {odd && (
         <div className="w-full lg:w-[35%] p-12 lg:p-20 flex flex-col items-start justify-center bg-zinc-50 h-[300px] lg:h-full gap-2">
           <h2 className="text=[16px] lg:text-[20px] font-semibold tracking-wider">
