@@ -58,12 +58,12 @@ const ContactForm = ({ hasOpenButton }: Props) => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full px-16">
+    <div className="flex flex-col items-center w-full px-0 lg:px-16">
       <div className="flex items-center gap-8">
         <div className="h-[1px] flex-1 bg-slate-300 dark:bg-slate-900"></div>
         {hasOpenButton && (
           <Button
-            className="mt-6 rounded-none tracking-[6px] font-semibold items-center flex justify-center py-7 px-12 text-[18px] border-[3px] hover:text-slate-100 border-slate-900 text-slate-900 bg-transparent"
+            className="mt-6 rounded-none tracking-[6px] font-semibold items-center flex justify-center py-5 lg:py-7 px-7 lg:px-12 text-[14px] lg:text-[18px] border-[3px] hover:text-slate-100 border-slate-900 text-slate-900 bg-transparent"
             onClick={handleEditorOpen}
           >
             {editorOpen ? "CLOSE" : "GET IN TOUCH"}
@@ -86,18 +86,18 @@ const ContactForm = ({ hasOpenButton }: Props) => {
                       <div className="flex flex-wrap gap-8">
                         <Input
                           placeholder="IME I PREZIME"
-                          className="w-[45%] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                         <Input
                           placeholder="EMAIL"
-                          className="w-[45%] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                         <Input
                           placeholder="TELEFON"
-                          className="w-[45%] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                         <Select>
-                          <SelectTrigger className="w-[45%] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1">
+                          <SelectTrigger className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1">
                             <SelectValue placeholder="STATUS LICA" />
                           </SelectTrigger>
                           <SelectContent className="rounded-none">
@@ -119,23 +119,23 @@ const ContactForm = ({ hasOpenButton }: Props) => {
                         </Select>
                         <Input
                           placeholder="VRSTA USLUGE"
-                          className="w-[45%] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                         <Input
                           placeholder="IME FIRME"
-                          className="w-[45%] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                         <Input
                           placeholder="PIB"
-                          className="w-[45%] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                         <Input
                           placeholder="ADRESA"
-                          className="w-[45%] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                         <Textarea
                           placeholder="PORUKA"
-                          className="w-[45%] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                       </div>
                     </FormControl>
@@ -145,7 +145,7 @@ const ContactForm = ({ hasOpenButton }: Props) => {
               />
               <Button
                 type="submit"
-                className="rounded-none tracking-[6px] font-semibold items-center flex justify-center py-7 px-12 text-[18px] border-[3px] hover:text-slate-100 border-slate-900 text-slate-900 bg-transparent"
+                className="rounded-none tracking-[6px] font-semibold items-center flex justify-center py-5 lg:py-7 px-7 lg:px-12 text-[14px] lg:text-[18px] border-[3px] hover:text-slate-100 border-slate-900 text-slate-900 bg-transparent"
               >
                 SEND
               </Button>

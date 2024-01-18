@@ -9,7 +9,17 @@ import pic8 from "@/public/images/r-architecture-TRCJ-87Yoh0-unsplash.jpg";
 
 export const navbarLinks = [
   { name: "HOME", href: "/" },
-  { name: "OUR SERVICES", href: "/our-services" },
+  {
+    name: "OUR SERVICES",
+    extralinks: [
+      { name: "Interior design", href: "/" },
+      { name: "Interior architecture", href: "/" },
+      { name: "Interior architecture", href: "/" },
+      { name: "Archetectural design", href: "/" },
+      { name: "Lightning design", href: "/" },
+    ],
+    href: "/our-services",
+  },
   { name: "ABOUT US", href: "/about-us" },
   { name: "PORTFOLIO", href: "/portfolio" },
   { name: "CONTACT US", href: "/contact-us" },
