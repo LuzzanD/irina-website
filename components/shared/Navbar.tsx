@@ -1,7 +1,6 @@
 "use client";
 
 import { navbarLinks } from "@/constants/data";
-import { pictureArray } from "@/constants/data";
 import { StaticImageData } from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
@@ -18,7 +17,7 @@ interface Props {
   href: string;
 }
 
-const Navbar = () => {
+const Navbar = ({ pictureArray }: { pictureArray: StaticImageData[] }) => {
   const [index, setIndex] = useState(0);
   const [scrolling, setScrolling] = useState(false);
   const [picture, setPicture] = useState<StaticImageData>(pictureArray[index]);
@@ -63,16 +62,16 @@ const Navbar = () => {
         }}
         className="flex border-b-white flex-col items-center justify-center h-[400px] lg:h-[600px] w-full bg-cover transition-all duration-1000 bg-no-repeat"
       >
-        <h1 className="text-white z-10 text-[8px] xxs:text-[12px] xs:text-[14px] sm:text-[20px] md:text-[30px] lg:text-[40px] tracking-[6px]">
+        <h1 className="text-white z-10 text-[10px] xxs:text-[15px] xs:text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] tracking-[2px] sm:tracking-[4px] lg:tracking-[6px]">
           Multi Award Winning
         </h1>
-        <h1 className="text-white z-10 text-[6px] xxs:text-[8px] xs:text-[10px] sm:text-[15px] md:text-[25px] lg:text-[35px] tracking-[6px]">
+        <h1 className="text-white z-10 text-[8px] xxs:text-[10px] xs:text-[20px] sm:text-[25px] md:text-[30px] lg:text-[35px] tracking-[2px] sm:tracking-[4px] lg:tracking-[6px]">
           Design Studio
         </h1>
       </nav>
       <div
         id="menubar"
-        className={`transition-colors duration-200 ease-in-out hidden z-10 fixed top-0 md:flex h-[80px] justify-center items-center w-full gap-8 p-12 mb-24 ${
+        className={`transition-colors duration-200 ease-in-out hidden z-10 fixed top-0 md:flex h-[80px] justify-center items-center w-full gap-8 p-6 lg:p-10 mb-24 ${
           scrolling
             ? "text-zinc-900 bg-gradient-to-b from-zinc-100 via-zinc-100 to-zinc-100/80 border-b-[1px] border-zinc-300"
             : "bg-transparent text-zinc-100"
@@ -80,10 +79,9 @@ const Navbar = () => {
       >
         {navbarLinks.map((link, index) => {
           return (
-            <>
+            <div key={index}>
               {!link.extralinks && (
                 <Link
-                  key={index}
                   className=" md:text-[14px] lg:text-[16px] xl:text-[20px] h-fit"
                   href={`${link.href}`}
                 >
@@ -106,11 +104,11 @@ const Navbar = () => {
                   </DropdownMenuContent>
                 </DropdownMenu>
               )}
-            </>
+            </div>
           );
         })}
       </div>
-      <div className="absolute top-5 right-10 md:hidden">
+      <div className="absolute top-5 right-8 md:hidden">
         <MobileMenu />
       </div>
     </>

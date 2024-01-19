@@ -11,22 +11,22 @@ interface Props {
 const Footer = () => {
   return (
     <footer className="w-full flex flex-col bg-zinc-800 text-slate-100">
-      <div className="flex w-full p-3 md:p-6 lg:p-16 ">
-        <div className="w-[15%] lg:w-[20%] text-[14px] lg:text-[18px] font-semibold ">
+      <div className="flex w-full flex-col items-center sm:flex-row p-3 md:p-6 lg:p-16 ">
+        <div className="w-[20%] text-[14px] lg:text-[18px] font-semibold ">
           Logo
         </div>
-        <div className="flex w-[80%] gap-3 lg:gap-4">
+        <div className="flex flex-col sm:flex-row sm:w-[80%] justify-around gap-4 lg:gap-6">
           {footerLinks.map((link, index) => {
             return (
-              <div key={index} className="flex flex-col w-full">
-                <h2 className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] font-semibold mb-2 md:mb-4">
+              <div key={index} className="flex text-start flex-col">
+                <h2 className="text-[11px] xxs:text-[12px] xs:text-[14px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px] font-bold mb-2 md:mb-4">
                   {link.name}
                 </h2>
-                <div className="flex flex-col gap-1 md:gap-2">
+                <div className="flex flex-col gap-1 md:gap-1.5">
                   {link.links.map((link: Props) => (
                     <Link
                       href={link.href}
-                      className="text-[8px] sm:text-[10px] md:text-[12px] lg:text-[14px] xl:text-[16px]"
+                      className="text-[11px] xxs:text-[12px]  xs:text-[14px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[18px]"
                       key={link.href}
                       target={link.blank ? "_blank" : ""}
                     >

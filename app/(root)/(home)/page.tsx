@@ -17,7 +17,7 @@ export default function Home() {
         <h2 className="text-[10px] xs:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] tracking-[2px] lg:tracking-[5px] font-semibold my-1.5 sm:my-3 lg:my-4">
           BOOK AN INITIAL CONSULTATION
         </h2>
-        <p className="text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px]">
+        <p className="text-[8px] xxs:text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px]">
           We’d love to discuss your project, to book an initial no charge
           consultation, please click below.
         </p>

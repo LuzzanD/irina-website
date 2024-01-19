@@ -27,17 +27,18 @@ const MobileMenu = () => {
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle>Are you absolutely sure?</SheetTitle>
+            <SheetTitle className="text-[14px] sm:text-[16px] -mt-0.5 sm:-mt-1 text-start mb-8 w-[70%]">
+              Irina 2009
+            </SheetTitle>
             <SheetDescription></SheetDescription>
           </SheetHeader>
-          <div className="flex flex-col text-zinc-900">
+          <div className="flex flex-col gap-2 text-zinc-900">
             {navbarLinks.map((link, index) => {
               return (
-                <>
+                <div key={index}>
                   {!link.extralinks && (
                     <Link
-                      key={index}
-                      className="text-zinc-900 text-[20px] h-fit"
+                      className="text-zinc-900 text-[16px] h-fit"
                       href={`${link.href}`}
                     >
                       {link.name}
@@ -45,7 +46,7 @@ const MobileMenu = () => {
                   )}
                   {link.extralinks && (
                     <DropdownMenu>
-                      <DropdownMenuTrigger className="text-zinc-900 bg-transparent text-[20px] w-fit m-0 p-0 h-fit border-none">
+                      <DropdownMenuTrigger className="text-zinc-900 bg-transparent text-[16px] w-fit m-0 p-0 h-fit border-none">
                         OUR SERVICES
                       </DropdownMenuTrigger>
                       <DropdownMenuContent className="rounded-none">
@@ -62,7 +63,7 @@ const MobileMenu = () => {
                       </DropdownMenuContent>
                     </DropdownMenu>
                   )}
-                </>
+                </div>
               );
             })}
           </div>
