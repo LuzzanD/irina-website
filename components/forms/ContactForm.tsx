@@ -25,7 +25,31 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 
 const formSchema = z.object({
+  imeIPrezime: z.string().min(50, {
+    message: "Explanation of the question must be at least 50 characters.",
+  }),
+  email: z.string().min(50, {
+    message: "Explanation of the question must be at least 50 characters.",
+  }),
+  tel: z.string().min(50, {
+    message: "Explanation of the question must be at least 50 characters.",
+  }),
   text: z.string().min(50, {
+    message: "Explanation of the question must be at least 50 characters.",
+  }),
+  usluga: z.string().min(50, {
+    message: "Explanation of the question must be at least 50 characters.",
+  }),
+  firma: z.string().min(50, {
+    message: "Explanation of the question must be at least 50 characters.",
+  }),
+  pib: z.string().min(50, {
+    message: "Explanation of the question must be at least 50 characters.",
+  }),
+  adresa: z.string().min(50, {
+    message: "Explanation of the question must be at least 50 characters.",
+  }),
+  poruka: z.string().min(50, {
     message: "Explanation of the question must be at least 50 characters.",
   }),
 });
@@ -58,10 +82,10 @@ const ContactForm = ({ hasOpenButton }: Props) => {
   };
 
   return (
-    <div className="flex flex-col items-center w-full px-4 md:px-8 lg:px-16">
+    <div className="flex flex-col items-center w-full px-4 md:px-8 lg:px-12">
       {hasOpenButton && (
         <Button
-          className="mt-6 rounded-none tracking-[2px] sm:tracking-[4px] lg:tracking-[6px] font-semibold items-center flex justify-center sm:py-5 lg:py-7 py-3 px-3 sm:px-7 lg:px-12 text-[10px] xs:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] border-[1.5px] sm:border-[2px] lg:border-[3px] hover:text-slate-100 border-slate-900 text-slate-900 bg-transparent"
+          className="mt-6 rounded-none tracking-[2px] sm:tracking-[4px] lg:tracking-[6px] font-semibold items-center flex justify-center sm:py-5 lg:py-7 py-2 px-3 sm:px-7 lg:px-12 text-[8px] xxs:text-[10px] xs:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] border-[1.5px] sm:border-[2px] lg:border-[3px] hover:text-slate-100 border-slate-900 text-slate-900 bg-transparent"
           onClick={handleEditorOpen}
         >
           {editorOpen ? "CLOSE" : "GET IN TOUCH"}
@@ -83,19 +107,22 @@ const ContactForm = ({ hasOpenButton }: Props) => {
                     <FormControl className="w-full flex flex-wrap gap-8 justify-center">
                       <div className="flex flex-wrap gap-8">
                         <Input
+                          name="imeIPrezime"
                           placeholder="IME I PREZIME"
-                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[9px] xs:text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                         <Input
+                          name="email"
                           placeholder="EMAIL"
-                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[9px] xs:text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                         <Input
+                          name="tel"
                           placeholder="TELEFON"
-                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[9px] xs:text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                         <Select>
-                          <SelectTrigger className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1">
+                          <SelectTrigger className="w-full lg:w-[45%] text-[9px] xs:text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1">
                             <SelectValue placeholder="STATUS LICA" />
                           </SelectTrigger>
                           <SelectContent className="rounded-none">
@@ -116,24 +143,29 @@ const ContactForm = ({ hasOpenButton }: Props) => {
                           </SelectContent>
                         </Select>
                         <Input
+                          name="usluga"
                           placeholder="VRSTA USLUGE"
-                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[9px] xs:text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                         <Input
+                          name="firma"
                           placeholder="IME FIRME"
-                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[9px] xs:text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                         <Input
+                          name="pib"
                           placeholder="PIB"
-                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[9px] xs:text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                         <Input
+                          name="adresa"
                           placeholder="ADRESA"
-                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[9px] xs:text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                         <Textarea
+                          name="poruka"
                           placeholder="PORUKA"
-                          className="w-full lg:w-[45%] text-[11px] lg:text-[16px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
+                          className="w-full lg:w-[45%] text-[9px] xs:text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] bg-transparent text-zinc-900 font-bold border-t-0 border-l-0 border-r-0 rounded-none border-zinc-900 border-b-1"
                         />
                       </div>
                     </FormControl>
@@ -143,7 +175,7 @@ const ContactForm = ({ hasOpenButton }: Props) => {
               />
               <Button
                 type="submit"
-                className="rounded-none text-center tracking-[2px] sm:tracking-[4px] lg:tracking-[6px] font-semibold items-center flex justify-center sm:py-5 lg:py-7 py-3 px-3 sm:px-7 lg:px-12 text-[10px] xs:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] border-[1.5px] sm:border-[2px] lg:border-[3px] hover:text-slate-100 border-slate-900 text-slate-900 bg-transparent"
+                className="rounded-none text-center tracking-[2px] sm:tracking-[4px] lg:tracking-[6px] font-semibold items-center flex justify-center sm:py-5 lg:py-7 py-2 px-3 sm:px-7 lg:px-12 text-[8px] xxs:text-[10px] xs:text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] border-[1.5px] sm:border-[2px] lg:border-[3px] hover:text-slate-100 border-slate-900 text-slate-900 bg-transparent"
               >
                 SEND
               </Button>

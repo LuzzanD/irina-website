@@ -16,18 +16,30 @@ import {
 import Link from "next/link";
 import { navbarLinks } from "@/constants/data";
 
-const MobileMenu = () => {
+const MobileMenu = ({ scrolling }: { scrolling: boolean }) => {
   return (
     <div>
       <Sheet>
         <SheetTrigger>
-          <div className="w-[20px] h-[1px] bg-zinc-100 mb-1 "></div>
-          <div className="w-[20px] h-[1px] bg-zinc-100"></div>
-          <div className="w-[20px] h-[1px] bg-zinc-100 mt-1 "></div>
+          <div
+            className={`w-[20px] h-[1px] -translate-y-[4px] ${
+              scrolling ? "bg-zinc-900" : "bg-zinc-100"
+            }`}
+          ></div>
+          <div
+            className={`w-[20px] h-[1.5px] ${
+              scrolling ? "bg-zinc-900" : "bg-zinc-100"
+            }`}
+          ></div>
+          <div
+            className={`w-[20px] h-[1px] translate-y-[4px] ${
+              scrolling ? "bg-zinc-900" : "bg-zinc-100"
+            }`}
+          ></div>
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-            <SheetTitle className="text-[14px] sm:text-[16px] -mt-0.5 sm:-mt-1 text-start mb-8 w-[70%]">
+            <SheetTitle className="sm:text-[14px]  md:text-[16px] -mt-0.5 sm:-mt-1 text-start mb-8 w-[70%]">
               Irina 2009
             </SheetTitle>
             <SheetDescription></SheetDescription>
@@ -38,7 +50,7 @@ const MobileMenu = () => {
                 <div key={index}>
                   {!link.extralinks && (
                     <Link
-                      className="text-zinc-900 text-[16px] h-fit"
+                      className="text-zinc-900 text-[11px] xxs:text-[15px] sm:text-[16px] md:text-[17px] h-fit"
                       href={`${link.href}`}
                     >
                       {link.name}
@@ -46,7 +58,7 @@ const MobileMenu = () => {
                   )}
                   {link.extralinks && (
                     <DropdownMenu>
-                      <DropdownMenuTrigger className="text-zinc-900 bg-transparent text-[16px] w-fit m-0 p-0 h-fit border-none">
+                      <DropdownMenuTrigger className="text-zinc-900 bg-transparent text-[11px] xxs:text-[15px] sm:text-[16px] md:text-[17px] w-fit m-0 p-0 h-fit border-none">
                         OUR SERVICES
                       </DropdownMenuTrigger>
                       <DropdownMenuContent className="rounded-none">

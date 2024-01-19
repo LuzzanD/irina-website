@@ -62,16 +62,16 @@ const Navbar = ({ pictureArray }: { pictureArray: StaticImageData[] }) => {
         }}
         className="flex border-b-white flex-col items-center justify-center h-[400px] lg:h-[600px] w-full bg-cover transition-all duration-1000 bg-no-repeat"
       >
-        <h1 className="text-white z-10 text-[10px] xxs:text-[15px] xs:text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] tracking-[2px] sm:tracking-[4px] lg:tracking-[6px]">
+        <h1 className="text-white z-10 text-[13px] xxs:text-[18px] xs:text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] tracking-[2px] sm:tracking-[4px] lg:tracking-[6px]">
           Multi Award Winning
         </h1>
-        <h1 className="text-white z-10 text-[8px] xxs:text-[10px] xs:text-[20px] sm:text-[25px] md:text-[30px] lg:text-[35px] tracking-[2px] sm:tracking-[4px] lg:tracking-[6px]">
+        <h1 className="text-white z-10 text-[10px] xxs:text-[14px] xs:text-[20px] sm:text-[25px] md:text-[30px] lg:text-[35px] tracking-[2px] sm:tracking-[4px] lg:tracking-[6px]">
           Design Studio
         </h1>
       </nav>
       <div
         id="menubar"
-        className={`transition-colors duration-200 ease-in-out hidden z-10 fixed top-0 md:flex h-[80px] justify-center items-center w-full gap-8 p-6 lg:p-10 mb-24 ${
+        className={`transition-colors duration-200 ease-in-out z-10 fixed top-0 md:flex md:h-[60px] lg:h-[80px] justify-center items-center w-full md:gap-6 lg:gap-8 p-6 lg:p-10 mb-24 ${
           scrolling
             ? "text-zinc-900 bg-gradient-to-b from-zinc-100 via-zinc-100 to-zinc-100/80 border-b-[1px] border-zinc-300"
             : "bg-transparent text-zinc-100"
@@ -79,7 +79,7 @@ const Navbar = ({ pictureArray }: { pictureArray: StaticImageData[] }) => {
       >
         {navbarLinks.map((link, index) => {
           return (
-            <div key={index}>
+            <div key={index} className="hidden md:flex">
               {!link.extralinks && (
                 <Link
                   className=" md:text-[14px] lg:text-[16px] xl:text-[20px] h-fit"
@@ -107,9 +107,9 @@ const Navbar = ({ pictureArray }: { pictureArray: StaticImageData[] }) => {
             </div>
           );
         })}
-      </div>
-      <div className="absolute top-5 right-8 md:hidden">
-        <MobileMenu />
+        <div className="w-fit ml-auto md:hidden">
+          <MobileMenu scrolling={scrolling} />
+        </div>
       </div>
     </>
   );
